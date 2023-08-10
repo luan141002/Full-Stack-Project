@@ -9,7 +9,10 @@ const cartSlice = createSlice({
             state.push(action.payload);
         },
         removeItem: (state, action) => {
-            return state.filter((item) => item.id !== action.payload.id);
+            console.log(action.payload);
+            return state.filter(
+                (item) => item.idMeal !== action.payload.idMeal
+            );
         },
         calculateTotal: (state, action) => {
             const total = state.reduce((total, item) => total + item.id, 0);

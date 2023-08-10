@@ -13,7 +13,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import CartItem from '../../Cart_Item';
 
 const Sub_Content_2 = () => {
-    const lCartItems = useSelector((state) => state.cart);
+    var lCartItems = useSelector((state) => state.cart);
     const dispatch = useDispatch();
     const prevTotal = useRef();
     prevTotal.current = lCartItems
